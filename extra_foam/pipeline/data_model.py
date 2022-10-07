@@ -888,12 +888,13 @@ class DigitizerData(_DigitizerChannelData):
 
 
 class BraggPeakData:
-    __slots__ = ["roi", "roi_intensity", "pulses",
+    __slots__ = ["roi", "roi_dims", "roi_intensity", "pulses",
                  "center_of_mass", "center_of_mass_stddev",
                  "pulse_intensity", "lineout_x", "lineout_y"]
 
     def __init__(self):
         self.roi = { }
+        self.roi_dims = { }
         self.roi_intensity = { }
         self.pulses = { }
         self.center_of_mass = { }

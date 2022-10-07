@@ -153,6 +153,7 @@ class ImageTransformProcessor(_BaseProcessor):
                 pulses_mean = masked_mean[y:max_y, x:max_x]
 
                 bragg_peak_data.roi[data_label] = pulses_mean
+                bragg_peak_data.roi_dims[data_label] = dims
                 bragg_peak_data.roi_intensity[data_label] = np.nansum(pulses_mean)
                 bragg_peak_data.pulses[data_label] = pulses_roi
                 bragg_peak_data.lineout_x[data_label] = np.nanmean(pulses_roi, axis=-1)
